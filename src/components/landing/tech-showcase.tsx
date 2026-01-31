@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Server, Database, Shield, Code, Cpu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function TechShowcase() {
     return (
@@ -82,6 +84,15 @@ export function TechShowcase() {
                                     className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-transparent to-transparent opacity-50" />
+
+                                {/* Live Demo Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm">
+                                    <Link href="https://dashboard.mym.hamdan.lol/" target="_blank">
+                                        <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6">
+                                            Try Live Demo
+                                        </Button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
 
